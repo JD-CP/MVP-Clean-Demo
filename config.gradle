@@ -1,0 +1,90 @@
+ext {
+
+    android = [
+            compileSdkVersion: 26,
+            buildToolsVersion: "26.0.2",
+            minSdkVersion    : 14,
+            targetSdkVersion : 26,
+            versionCode      : 100,
+            versionName      : "1.0.0"
+    ]
+
+    dependVersion = [
+            androidSupportSdkVersion: "26.0.2",
+            annotationsVersion      : "23.1.1",
+            constraint              : "1.0.2",
+            annotations             : "23.1.1",
+            rxJava                  : "2.1.5",
+            rxAndroid               : "2.0.1",
+            okHttpLoggingVersion    : "3.5.0",
+            retrofitSdkVersion      : "2.3.0",
+            eventBusVersion         : "1.0.5.1",
+            butterKnife             : "8.2.0",
+            pictureSelector         : "v2.1.1",
+            citypicker              : "2.0.1",
+            pickerView              : "3.2.6",
+            timePickerDialog        : "1.0.1",
+            paperdb                 : "1.5",
+            multidex                : "1.0.1",
+            adapterHelper           : "2.9.28",
+            smartRefresh            : "1.1.0-alpha-5",
+            permission              : "1.0.7",
+            greenDao                : "3.2.0",
+            greenDaoHelper          : "v2.0.0",
+    ]
+
+    supportDeps = [
+            appcompatv7 : "com.android.support:appcompat-v7:$dependVersion.androidSupportSdkVersion",
+            design      : "com.android.support:design:$dependVersion.androidSupportSdkVersion",
+            recyclerview: "com.android.support:recyclerview-v7:$dependVersion.androidSupportSdkVersion",
+            constraint  : "com.android.support.constraint:constraint-layout:$dependVersion.constraint",
+    ]
+
+
+    retrofit = [
+            retrofit                : "com.squareup.retrofit2:retrofit:$dependVersion.retrofitSdkVersion",
+            retrofitConverterGson   : "com.squareup.retrofit2:converter-gson:$dependVersion.retrofitSdkVersion",
+            retrofitAdapterRxjava2  : "com.squareup.retrofit2:adapter-rxjava2:$dependVersion.retrofitSdkVersion",
+            okhttp3LoggerInterceptor: "com.squareup.okhttp3:logging-interceptor:$dependVersion.okHttpLoggingVersion",
+    ]
+
+    rxJava = [
+            rxJava   : "io.reactivex.rxjava2:rxjava:$dependVersion.rxJava",
+            rxAndroid: "io.reactivex.rxjava2:rxandroid:$dependVersion.rxAndroid",
+    ]
+
+    greeenDao = [
+            greeenDao         : "org.greenrobot:greendao:$dependVersion.greenDao",
+            greeenDaoGenerator: "org.greenrobot:greendao-generator:$dependVersion.greenDao",
+            // greenDaoUpgradeHelper: "com.github.yuweiguocn:GreenDaoUpgradeHelper:$dependVersion.greenDaoHelper",
+    ]
+
+    butterKnife = [
+            butterKnife: "com.jakewharton:butterknife:$dependVersion.butterKnife",
+    ]
+
+    picker = [
+            pictureSelector : "com.github.LuckSiege.PictureSelector:picture_library:$dependVersion.pictureSelector",
+            citypicker      : "liji.library.dev:citypickerview:$dependVersion.citypicker",
+            pickerView      : "com.contrarywind:Android-PickerView:$dependVersion.pickerView",
+            timePickerDialog: "com.jzxiang.pickerview:TimePickerDialog:$dependVersion.timePickerDialog",
+    ]
+
+    other = [
+            eventBus     : "org.simple:androideventbus:$dependVersion.eventBusVersion",
+            paperdb      : "io.paperdb:paperdb:$dependVersion.paperdb",
+            multidex     : "com.android.support:multidex:$dependVersion.multidex",
+            smartRefresh : "com.scwang.smartrefresh:SmartRefreshLayout:$dependVersion.smartRefresh",
+            adapterHelper: "com.github.CymChad:BaseRecyclerViewAdapterHelper:$dependVersion.adapterHelper",
+            permission   : "me.weyye.hipermission:library:$dependVersion.permission",
+    ]
+
+    supportLibs = supportDeps.values()
+    networkLibs = retrofit.values()
+    rxJavaLibs = rxJava.values()
+    greeenDaoLibs = greeenDao.values()
+    butterKnifeLibs = butterKnife.values()
+    pickerLibs = picker.values()
+    otherLibs = other.values()
+
+}
